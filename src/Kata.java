@@ -342,7 +342,7 @@ public class Kata {
         n copies of the original string. */
     public String stringTimes(String str, int n) {
         StringBuilder newStr = new StringBuilder();
-        for (int i = 1; i < n; i++){
+        for (int i = 1; i <= n; i++){
             newStr.append(str);
         }
         return newStr.toString();
@@ -359,5 +359,16 @@ public class Kata {
             return buffer;
         }
     }
+
+    public String frontThree(String str){
+        if (str.length() < 2) {
+            return str + str + str;
+        } else {
+            String first3;
+            first3 = str.substring(0, 3);
+            return first3 + first3 + first3;
+        }
+    }
+
 
 }

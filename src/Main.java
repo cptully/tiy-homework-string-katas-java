@@ -454,6 +454,16 @@ public class Main {
 
         System.out.println();
         System.out.println("++++++++++++++++++++++++++++++++++++");
+        System.out.println("testing kata.stringTimes()");
+        System.out.println("explode(\"Java\", 3) " + kata.stringTimes("Java", 3));
+        System.out.println("explode(\"Raleigh\", 5) " + kata.stringTimes("Raleigh", 5));
+        System.out.println("explode(\"Fun\", 7) " + kata.stringTimes("Fun", 7));
+        System.out.println("explode(\"a\", 3) " + kata.stringTimes("a", 3));
+        System.out.println("explode(\"\", 6) " + kata.stringTimes("", 6));
+        System.out.println("explode(\"program\", 4) " + kata.stringTimes("program", 4));
+
+        System.out.println();
+        System.out.println("++++++++++++++++++++++++++++++++++++");
         System.out.println("testing kata.explode()");
         System.out.println("explode(\"example\") " + kata.explode("example"));
         System.out.println("explode(\"cat\") " + kata.explode("cat"));
@@ -463,5 +473,15 @@ public class Main {
         System.out.println("explode(\"Capital\") " + kata.explode("Capital"));
         System.out.println("explode(\"home time\") " + kata.explode("home time"));
 
+        System.out.println();
+        System.out.println("++++++++++++++++++++++++++++++++++++");
+        System.out.println("testing kata.frontThree()");
+        System.out.println("frontThree(\"example\") " + kata.frontThree("example"));
+        System.out.println("frontThree(\"JavaScript\") " + kata.frontThree("JavaScript"));
+        System.out.println("frontThree(\"Chocolate\") " + kata.frontThree("Chocolate"));
+        System.out.println("frontThree(\"abc\") " + kata.frontThree("abc"));
+        System.out.println("frontThree(\"a\") " + kata.frontThree("a"));
+        System.out.println("frontThree(\"\") " + kata.frontThree(""));
+        System.out.println("frontThree(\"Fun Times\") " + kata.frontThree("Fun Times"));
     }
 }
