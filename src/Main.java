@@ -377,5 +377,91 @@ public class Main {
         System.out.println("close10(5, 21)): " + kata.close10(5, 21));  // → 5	5	OK
         System.out.println("close10(0, 20)): " + kata.close10(0, 20));  // → 0	0	OK
         System.out.println("close10(10, 10)): " + kata.close10(10, 10));  // → 0	0	OK
+
+        System.out.println();
+        System.out.println("++++++++++++++++++++++++++++++++++++");
+        System.out.println("testing Kata.in3050()");
+        System.out.println("in3050(30, 31)): " + kata.in3050(30, 31));  // → true	true	OK
+        System.out.println("in3050(30, 41)): " + kata.in3050(30, 41));  // → false	false	OK
+        System.out.println("in3050(40, 50)): " + kata.in3050(40, 50));  // → true	true	OK
+        System.out.println("in3050(40, 51)): " + kata.in3050(40, 51));  // → false	false	OK
+        System.out.println("in3050(39, 50)): " + kata.in3050(39, 50));  // → false	false	OK
+        System.out.println("in3050(50, 39)): " + kata.in3050(50, 39));  // → false	false	OK
+        System.out.println("in3050(40, 39)): " + kata.in3050(40, 39));  // → true	true	OK
+        System.out.println("in3050(49, 48)): " + kata.in3050(49, 48));  // → true	true	OK
+        System.out.println("in3050(50, 40)): " + kata.in3050(50, 40));  // → true	true	OK
+        System.out.println("in3050(50, 51)): " + kata.in3050(50, 51));  // → false	false	OK
+        System.out.println("in3050(35, 36)): " + kata.in3050(35, 36));  // → true	true	OK
+        System.out.println("in3050(35, 45)): " + kata.in3050(35, 45));  // → false	false	OK
+
+        System.out.println();
+        System.out.println("++++++++++++++++++++++++++++++++++++");
+        System.out.println("testing Kata.max1020()");
+        System.out.println("max1020(11, 19)): " + kata.max1020(11, 19));  // → 19	19	OK
+        System.out.println("max1020(19, 11)): " + kata.max1020(19, 11));  // → 19	19	OK
+        System.out.println("max1020(11,  9)): " + kata.max1020(11,  9));  // → 11	11	OK
+        System.out.println("max1020(9,  21)): " + kata.max1020(9,  21));  // → 0	0	OK
+        System.out.println("max1020(10, 21)): " + kata.max1020(10, 21));  // → 10	10	OK
+        System.out.println("max1020(21, 10)): " + kata.max1020(21, 10));  // → 10	10	OK
+        System.out.println("max1020(9,  11)): " + kata.max1020(9,  11));  // → 11	11	OK
+        System.out.println("max1020(23, 10)): " + kata.max1020(23, 10));  // → 10	10	OK
+        System.out.println("max1020(20, 10)): " + kata.max1020(20, 10));  // → 20	20	OK
+        System.out.println("max1020(7,  20)): " + kata.max1020(7,  20));  // → 20	20	OK
+        System.out.println("max1020(17, 16)): " + kata.max1020(17, 16));  // → 17	17	OK
+
+        System.out.println();
+        System.out.println("++++++++++++++++++++++++++++++++++++");
+        System.out.println("testing Kata.stringE()");
+        System.out.println("stringE(\"Hello\")): " + kata.stringE("Hello"));  // → true	Exception:java.lang.StringIndexOutOfBoundsException: String index out of range: 5 (line number:7)	X
+        System.out.println("stringE(\"Heelle\")): " + kata.stringE("Heelle"));  // → true	Exception:java.lang.StringIndexOutOfBoundsException: String index out of range: 6 (line number:7)	X
+        System.out.println("stringE(\"Heelele\")): " + kata.stringE("Heelele"));  // → false	Exception:java.lang.StringIndexOutOfBoundsException: String index out of range: 7 (line number:7)	X
+        System.out.println("stringE(\"Hll\")): " + kata.stringE("Hll"));  // → false	false	OK
+        System.out.println("stringE(\"e\")): " + kata.stringE("e"));  // → true	Exception:java.lang.StringIndexOutOfBoundsException: String index out of range: 1 (line number:7)	X
+        System.out.println("stringE(\"\")): " + kata.stringE(""));  // → false	false	OK
+
+        System.out.println();
+        System.out.println("++++++++++++++++++++++++++++++++++++");
+        System.out.println("testing Kata.stringE()");
+        System.out.println("stringE(7,    17)): " + kata.lastDigit(7,    17));  // → true	true	OK
+        System.out.println("stringE(6,    17)): " + kata.lastDigit(6,    17));  // → false	false	OK
+        System.out.println("stringE(3,   113)): " + kata.lastDigit(3,   113));  // → true	true	OK
+        System.out.println("stringE(114, 113)): " + kata.lastDigit(114, 113));  // → false	false	OK
+        System.out.println("stringE(114,   4)): " + kata.lastDigit(114,   4));  // → true	true	OK
+        System.out.println("stringE(10,    0)): " + kata.lastDigit(10,    0));  // → true	true	OK
+        System.out.println("stringE(11,    0)): " + kata.lastDigit(11,    0));  // → false	false	OK
+
+        System.out.println();
+        System.out.println("++++++++++++++++++++++++++++++++++++");
+        System.out.println("testing Kata.endUp()");
+        System.out.println("endUp(\"Hello\")): " + kata.endUp("Hello"));  // → "HeLLO"	"HELLO"	X
+        System.out.println("endUp(\"hi there\")): " + kata.endUp("hi there"));  // → "hi thERE"	"HI THERE"	X
+        System.out.println("endUp(\"hi\")): " + kata.endUp("hi"));  // → "HI"	"HI"	OK
+        System.out.println("endUp(\"woo hoo\")): " + kata.endUp("woo hoo"));  // → "woo HOO"	"WOO HOO"	X
+        System.out.println("endUp(\"xyz12\")): " + kata.endUp("xyz12"));  // → "xyZ12"	"XYZ12"	X
+        System.out.println("endUp(\"x\")): " + kata.endUp("x"));  // → "X"	Exception:java.lang.StringIndexOutOfBoundsException: String index out of range: -1 (line number:5)	X
+        System.out.println("endUp(\"\")): " + kata.endUp(""));  // → ""	Exception:java.lang.StringIndexOutOfBoundsException: String index out of range: -2 (line number:5)	X
+
+        System.out.println();
+        System.out.println("++++++++++++++++++++++++++++++++++++");
+        System.out.println("testing Kata.endUp()");
+        System.out.println("endUp(\"Miracle\",      2)): " + kata.everyNth("Miracle", 2));  // → "Mrce"	"Mrc"	X	
+        System.out.println("endUp(\"abcdefg\",      2)): " + kata.everyNth("abcdefg", 2));  // → "aceg"	"ace"	X	
+        System.out.println("endUp(\"abcdefg\",      3)): " + kata.everyNth("abcdefg", 3));  // → "adg"	"ad"	X	
+        System.out.println("endUp(\"Chocolate\",    3)): " + kata.everyNth("Chocolate", 3));  // → "Cca"	"Cca"	OK	
+        System.out.println("endUp(\"Chocolates\",   3)): " + kata.everyNth("Chocolates", 3));  // → "Ccas"	"Cca"	X	
+        System.out.println("endUp(\"Chocolates\",   4)): " + kata.everyNth("Chocolates", 4));  // → "Coe"	"Coe"	OK	
+        System.out.println("endUp(\"Chocolates\", 100)): " + kata.everyNth("Chocolates", 100));  // → "C"	"C"	OK
+
+        System.out.println();
+        System.out.println("++++++++++++++++++++++++++++++++++++");
+        System.out.println("testing kata.explode()");
+        System.out.println("explode(\"example\") " + kata.explode("example"));
+        System.out.println("explode(\"cat\") " + kata.explode("cat"));
+        System.out.println("explode(\"c\") " + kata.explode("c"));
+        System.out.println("explode(\"\") " + kata.explode(""));
+        System.out.println("explode(\"craft\") " + kata.explode("craft"));
+        System.out.println("explode(\"Capital\") " + kata.explode("Capital"));
+        System.out.println("explode(\"home time\") " + kata.explode("home time"));
+
     }
 }

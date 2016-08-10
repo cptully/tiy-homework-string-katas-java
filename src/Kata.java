@@ -260,4 +260,104 @@ public class Kata {
             return a;
         }
     }
+
+    /* Given 2 int values, return true if they are both in the range 30..40
+     inclusive, or they are both in the range 40..50 inclusive.*/
+    public boolean in3050(int a, int b) {
+        return (((a >= 30) && (a <= 40)) && ((b >= 30) && (b <= 40))) ||
+               (((a >= 40) && (a <= 50)) && ((b >= 40) && (b <= 50)));
+    }
+
+    /* Given 2 positive int values, return the larger value that is in the
+        range 10..20 inclusive, or return 0 if neither is in that range. */
+    public int max1020(int a, int b) {
+        if (((a >= 10) && (a <= 20)) && ((b >= 10) && (b <= 20))) {
+            if (a > b) {
+                return a;
+            } else {
+                return b;
+            }
+        } else if ((a >= 10) && (a <= 20)) {
+            return a;
+        } else if ((b >= 10) && (b <= 20)){
+            return b;
+        } else {
+            return 0;
+        }
+    }
+
+    /* Return true if the given string contains between 1 and 3 'e' chars.*/
+    public boolean stringE(String str) {
+        if (str.contains("e")) {
+            int count = 0;
+            int i = 0;
+
+            while (count < 4) {
+                if ("e".equals(str.substring(i,i+1))) {
+                    count++;
+                }
+                if (++i >= str.length()) {
+                    break;
+                }
+            }
+
+            if (count <= 3) return true;
+        }
+        return false;
+    }
+
+    /* Given two non-negative int values, return true if they have the same last
+        digit, such as with 27 and 57. Note that the % "mod" operator computes
+        remainders, so 17 % 10 is 7.*/
+    public boolean lastDigit(int a, int b) {
+        return (a % 10) == (b % 10);
+    }
+
+    /* Given a string, return a new string where the last 3 chars are now in upper
+        case. If the string has less than 3 chars, uppercase whatever is there. Note
+        that str.toUpperCase() returns the uppercase version of a string.*/
+    public String endUp(String str) {
+        if (str.length() < 4) {
+            return str.toUpperCase();
+        } else {
+            String last3 = str.substring(str.length() - 3);
+            return str.substring(0, str.length()-3) + last3.toUpperCase();
+        }
+    }
+
+    /* Given a non-empty string and an int N, return the string made starting with
+        char 0, and then every Nth char of the string. So if N is 3, use char 0, 3,
+        6, ... and so on. N is 1 or more. */
+    public String everyNth(String str, int n) {
+        int i = 0;
+        String newStr = "";
+        while (i <= str.length() - 1) {
+            newStr = newStr + str.substring(i, i+1);
+            i += n;
+        }
+        return newStr;
+    }
+
+    /* Given a string and a non-negative int n, return a larger string that is
+        n copies of the original string. */
+    public String stringTimes(String str, int n) {
+        StringBuilder newStr = new StringBuilder();
+        for (int i = 1; i < n; i++){
+            newStr.append(str);
+        }
+        return newStr.toString();
+    }
+
+    public String explode(String str) {
+        if (str.length() < 2) {
+            return str;
+        } else {
+            String buffer = "";
+            for (int i = 0; i < str.length(); i++){
+                buffer = buffer + str.substring(i, i + 1) + " ";
+            }
+            return buffer;
+        }
+    }
+
 }
