@@ -108,12 +108,17 @@ public class Kata {
     /* Given a string, return a new string where "not " has been added to the front.
         However, if the string already begins with "not", return the string unchanged.
         Note: use .equals() to compare 2 strings. */
+/*
     public String notString(String str) {
         if ((str.length() >= 3) && (str.substring(0,3).equals("not"))){
             return str;
         } else {
             return "not " + str;
         }
+    }
+*/
+    public String notString(String str) {
+        return (str.startsWith("not") ? "not ": "") + str;
     }
 
     public String missingChar(String str, int n) {
@@ -123,7 +128,7 @@ public class Kata {
             if (n == 0) {
                 return str.substring(n+1);
             } else if (n == (str.length() - 1)) {
-                return str.substring(0, n+1);
+                return str.substring(0, n);
             } else {
                 return str.substring(0, n) + str.substring(n+1);
             }
@@ -356,6 +361,7 @@ public class Kata {
             for (int i = 0; i < str.length(); i++){
                 buffer = buffer + str.substring(i, i + 1) + " ";
             }
+            buffer = buffer.trim();
             return buffer;
         }
     }

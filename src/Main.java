@@ -443,14 +443,14 @@ public class Main {
 
         System.out.println();
         System.out.println("++++++++++++++++++++++++++++++++++++");
-        System.out.println("testing Kata.endUp()");
-        System.out.println("endUp(\"Miracle\",      2)): " + kata.everyNth("Miracle", 2));  // → "Mrce"	"Mrc"	X	
-        System.out.println("endUp(\"abcdefg\",      2)): " + kata.everyNth("abcdefg", 2));  // → "aceg"	"ace"	X	
-        System.out.println("endUp(\"abcdefg\",      3)): " + kata.everyNth("abcdefg", 3));  // → "adg"	"ad"	X	
-        System.out.println("endUp(\"Chocolate\",    3)): " + kata.everyNth("Chocolate", 3));  // → "Cca"	"Cca"	OK	
-        System.out.println("endUp(\"Chocolates\",   3)): " + kata.everyNth("Chocolates", 3));  // → "Ccas"	"Cca"	X	
-        System.out.println("endUp(\"Chocolates\",   4)): " + kata.everyNth("Chocolates", 4));  // → "Coe"	"Coe"	OK	
-        System.out.println("endUp(\"Chocolates\", 100)): " + kata.everyNth("Chocolates", 100));  // → "C"	"C"	OK
+        System.out.println("testing Kata.everyNth()");
+        System.out.println("everyNth(\"Miracle\",      2)): " + kata.everyNth("Miracle", 2));  // → "Mrce"	"Mrc"	X
+        System.out.println("everyNth(\"abcdefg\",      2)): " + kata.everyNth("abcdefg", 2));  // → "aceg"	"ace"	X
+        System.out.println("everyNth(\"abcdefg\",      3)): " + kata.everyNth("abcdefg", 3));  // → "adg"	"ad"	X
+        System.out.println("everyNth(\"Chocolate\",    3)): " + kata.everyNth("Chocolate", 3));  // → "Cca"	"Cca"	OK
+        System.out.println("everyNth(\"Chocolates\",   3)): " + kata.everyNth("Chocolates", 3));  // → "Ccas"	"Cca"	X
+        System.out.println("everyNth(\"Chocolates\",   4)): " + kata.everyNth("Chocolates", 4));  // → "Coe"	"Coe"	OK
+        System.out.println("everyNth(\"Chocolates\", 100)): " + kata.everyNth("Chocolates", 100));  // → "C"	"C"	OK
 
         System.out.println();
         System.out.println("++++++++++++++++++++++++++++++++++++");
